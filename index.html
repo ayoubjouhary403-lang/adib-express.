@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADIB EXPRESS - فورنيتور وأدوات مدرسية وإلكترونيات</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #0f172a;
+            --secondary: #d97706;
+            --accent: #84cc16; /* Neon Lime */
+            --bg-color: #0b0f19;
+            --card-bg: rgba(30, 41, 59, 0.7);
+            --text-color: #f8fafc;
+            --gold: #d97706;
+            --purple-royal: #581c87;
+            --neon-lime: #84cc16;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--purple-royal), var(--primary));
+            padding: 1.5rem 1rem;
+            text-align: center;
+            border-bottom: 3px solid var(--neon-lime);
+            box-shadow: 0 4px 20px rgba(88, 28, 135, 0.5);
+        }
+
+        .logo-container h1 {
+            font-size: 2.2rem;
+            color: #fff;
+            font-weight: 900;
+            letter-spacing: 1px;
+        }
+
+        .logo-container h1 span {
+            color: var(--neon-lime);
+            text-shadow: 0 0 10px rgba(132, 204, 22, 0.5);
+        }
+
+        .logo-container p {
+            font-size: 0.95rem;
+            color: #cbd5e1;
+            margin-top: 5px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        .section-title {
+            font-size: 1.6rem;
+            margin-bottom: 1.5rem;
+            border-right: 5px solid var(--neon-lime);
+            padding-right: 10px;
+            color: #fff;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .product-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(132, 204, 22, 0.2);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            backdrop-filter: blur(10px);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(132, 204, 22, 0.2);
+            border-color: var(--neon-lime);
+        }
+
+        .product-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            background: #1e293b;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #64748b;
+            font-size: 3rem;
+        }
+
+        .product-info {
+            padding: 1.2rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .product-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: #fff;
+        }
+
+        .product-price {
+            font-size: 1.25rem;
+            font-weight: 900;
+            color: var(--neon-lime);
+            margin-bottom: 1rem;
+        }
+
+        .buy-btn {
+            background: linear-gradient(135deg, var(--neon-lime), #65a30d);
+            color: #0f172a;
+            border: none;
+            padding: 0.75rem;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            width: 100%;
+            transition: opacity 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .buy-btn:hover {
+            opacity: 0.9;
+        }
+
+        footer {
+            background: var(--primary);
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <h1>ADIB <span>EXPRESS</span></h1>
+            <p>وجهتك الأولى للوازم المدرسية، المكتبية والإلكترونيات بأثمنة جد مناسبة</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2 class="section-title">أبرز المنتجات واللوازم</h2>
+        
+        <div class="products-grid">
+            <!-- منتج 1 -->
+            <div class="product-card">
+                <div class="product-img"><i class="fas5 fa-book"></i></div>
+                <div class="product-info">
+                    <div>
+                        <div class="product-title">دفتر مدرسي مسطر (سلسلة الجودة)</div>
+                        <div class="product-price">12.00 درهم</div>
+                    </div>
+                    <button class="buy-btn" onclick="alert('تمت إضافة المنتج إلى السلة بنجاح!')"><i class="fas fa-cart-plus"></i> اطلب الآن</button>
+                </div>
+            </div>
+
+            <!-- منتج 2 -->
+            <div class="product-card">
+                <div class="product-img"><i class="fas fa-pen-nib"></i></div>
+                <div class="product-info">
+                    <div>
+                        <div class="product-title">علبة أقلام حبر جاف عالية الدقة</div>
+                        <div class="product-price">25.00 درهم</div>
+                    </div>
+                    <button class="buy-btn" onclick="alert('تمت إضافة المنتج إلى السلة بنجاح!')"><i class="fas fa-cart-plus"></i> اطلب الآن</button>
+                </div>
+            </div>
+
+            <!-- منتج 3 -->
+            <div class="product-card">
+                <div class="product-img"><i class="fas fa-backpack"></i></div>
+                <div class="product-info">
+                    <div>
+                        <div class="product-title">محفظة مدرسية عصرية مريحة</div>
+                        <div class="product-price">180.00 درهم</div>
+                    </div>
+                    <button class="buy-btn" onclick="alert('تمت إضافة المنتج إلى السلة بنجاح!')"><i class="fas fa-cart-plus"></i> اطلب الآن</button>
+                </div>
+            </div>
+
+            <!-- منتج 4 -->
+            <div class="product-card">
+                <div class="product-img"><i class="fas fa-laptop"></i></div>
+                <div class="product-info">
+                    <div>
+                        <div class="product-title">مستلزمات إلكترونية وملحقات حاسوب</div>
+                        <div class="product-price">95.00 درهم</div>
+                    </div>
+                    <button class="buy-btn" onclick="alert('تمت إضافة المنتج إلى السلة بنجاح!')"><i class="fas fa-cart-plus"></i> اطلب الآن</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 ADIB EXPRESS. جميع الحقوق محفوظة.</p>
+    </footer>
+
+</body>
+</html>
